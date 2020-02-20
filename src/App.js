@@ -3,23 +3,14 @@ import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
 
 import HomePage from './pages/homepage/homepage.component';
-
-const HatsPage = props => (
-  <div>
-    <Link to="/">Home</Link>
-    <button onClick={() => props.history.push('/')}>Home</button>
-    <Link to={`${props.match.url}/13`}>To detail 13</Link>
-    <Link to={`${props.match.url}/17`}>To detail 17</Link>
-    <h1>HATS PAGE</h1>
-  </div>
-);
+import ShopPage from './pages/shop/shop.component';
 
 function App() {
   return (
     <div>
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route path='/hats' component={HatsPage} />
+        <Route path='/shop' component={ShopPage} />
       </Switch>
     </div>
   );
